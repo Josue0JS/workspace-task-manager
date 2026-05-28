@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #0f1117;
+    color: #e8eaf6;
+    font-family: 'Sora', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #161920;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3d45ea;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-2 border border-white/5 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-500 text-white font-medium px-5 py-2.5 rounded-xl
+           transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply text-white/60 hover:text-white hover:bg-white/5 font-medium px-4 py-2 rounded-xl
+           transition-all duration-200 active:scale-95;
+  }
+
+  .btn-danger {
+    @apply bg-red-500/20 hover:bg-red-500/30 text-red-400 font-medium px-4 py-2 rounded-xl
+           transition-all duration-200 active:scale-95 border border-red-500/20;
+  }
+
+  .input-field {
+    @apply w-full bg-surface-3 border border-white/10 rounded-xl px-4 py-2.5 text-white
+           placeholder-white/30 focus:outline-none focus:border-brand-500 focus:ring-1
+           focus:ring-brand-500/40 transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .badge-pending {
+    @apply badge bg-amber-500/15 text-amber-400 border border-amber-500/20;
+  }
+
+  .badge-progress {
+    @apply badge bg-blue-500/15 text-blue-400 border border-blue-500/20;
+  }
+
+  .badge-done {
+    @apply badge bg-emerald-500/15 text-emerald-400 border border-emerald-500/20;
+  }
+
+  .skeleton {
+    @apply bg-white/5 rounded-xl animate-pulse;
+  }
+}
+
+/* SweetAlert2 dark theme overrides */
+.swal2-popup {
+  background: #1e2130 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 1.25rem !important;
+  color: #e8eaf6 !important;
+  font-family: 'Sora', sans-serif !important;
+}
+
+.swal2-title {
+  color: #e8eaf6 !important;
+}
+
+.swal2-html-container {
+  color: rgba(232, 234, 246, 0.7) !important;
+}
+
+.swal2-confirm {
+  background-color: #3d45ea !important;
+  border-radius: 0.75rem !important;
+  font-family: 'Sora', sans-serif !important;
+}
+
+.swal2-cancel {
+  background-color: rgba(255,255,255,0.08) !important;
+  border-radius: 0.75rem !important;
+  font-family: 'Sora', sans-serif !important;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #f59e0b !important;
+  color: #f59e0b !important;
+}
+
+.swal2-icon.swal2-success {
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+}
+
+.swal2-icon.swal2-success [class^='swal2-success-line'] {
+  background-color: #10b981 !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
