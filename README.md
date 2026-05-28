@@ -104,7 +104,7 @@ main          ← producción estable
 ## Despliegue
 
 La aplicación está desplegada en Vercel:  
-🔗 **[URL_DE_VERCEL_AQUI]**
+(https://workspace-task-manager-olive.vercel.app)
 
 ---
 
